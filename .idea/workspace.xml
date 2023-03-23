@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0d632a6-6670-4f8d-9eb9-39ada00ef958" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/04a90ab5-7c3b-40f9-8c39-3eed70971beb.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/04a90ab5-7c3b-40f9-8c39-3eed70971beb/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/04a90ab5-7c3b-40f9-8c39-3eed70971beb/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/04a90ab5-7c3b-40f9-8c39-3eed70971beb/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/04a90ab5-7c3b-40f9-8c39-3eed70971beb/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dep10/studentUI/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dep10/studentUI/AppInitializerWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dep10/studentUI/controll/StudentManageViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/StudentManageView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dep10/studentUI/db/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dep10/studentUI/model/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/dep10/studentUI/controll/StudentManageViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/dep10/studentUI/controll/StudentManageViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/StudentManageView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/StudentManageView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +109,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679573812504</updated>
-      <workItem from="1679573813621" duration="2670000" />
+      <workItem from="1679573813621" duration="4721000" />
     </task>
     <servers />
   </component>

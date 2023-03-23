@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 
 public class StudentManageViewController {
@@ -22,7 +23,7 @@ public class StudentManageViewController {
     private TableView<?> tblStudents;
 
     @FXML
-    private TextField txtAdddress;
+    private TextField txtAddress;
 
     @FXML
     private TextField txtId;
@@ -30,9 +31,14 @@ public class StudentManageViewController {
     @FXML
     private TextField txtName;
 
-    @FXML
-    void brnSaveOnAction(ActionEvent event) {
+    public void initialize() {
+        tblStudents.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("id"));
+        tblStudents.getColumns().get(1).setCellValueFactory(new PropertyValueFactory<>("name"));
+        tblStudents.getColumns().get(2).setCellValueFactory(new PropertyValueFactory<>("address"));
+        loadStudents();
+    }
 
+    private void loadStudents() {
     }
 
     @FXML
@@ -42,6 +48,11 @@ public class StudentManageViewController {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnSaveOnAction(ActionEvent event) {
 
     }
 

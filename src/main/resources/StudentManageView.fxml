@@ -30,14 +30,14 @@
             <HBox spacing="10.0">
                <children>
                   <Label alignment="CENTER_RIGHT" prefWidth="80.0" text="Address" textAlignment="RIGHT" HBox.hgrow="ALWAYS" />
-                  <TextField fx:id="txtAdddress" disable="true" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="206.0" promptText="Panadura" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtAddress" disable="true" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="206.0" promptText="Panadura" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
          </children>
       </VBox>
       <HBox alignment="CENTER" layoutX="102.0" layoutY="200.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
          <children>
-            <Button fx:id="brnSave" disable="true" mnemonicParsing="false" onAction="#brnSaveOnAction" prefWidth="70.0" style="-fx-background-color: blue;" text="SAVE" textFill="WHITE" />
+            <Button fx:id="brnSave" disable="true" mnemonicParsing="false" onAction="#btnSaveOnAction" prefWidth="70.0" style="-fx-background-color: blue;" text="SAVE" textFill="WHITE" />
             <Button fx:id="btnDelete" disable="true" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefWidth="70.0" style="-fx-background-color: red;" text="DELETE" textFill="WHITE" />
          </children>
       </HBox>
