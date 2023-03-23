@@ -35,5 +35,6 @@ public class EmployeeSceneController {
     void btnSaveOnAction(ActionEvent event) {
 
     }
+    public void
 
 }
