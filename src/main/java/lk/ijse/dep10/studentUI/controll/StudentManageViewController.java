@@ -54,6 +54,13 @@ public class StudentManageViewController {
                 txtAddress.getStyleClass().add("invalid");
             }
         } );
+        tblStudents.getSelectionModel().selectedItemProperty().addListener((observableValue, student, current) ->{
+            if(current==null)return;
+            txtId.setText(current.getId());
+            txtName.setText(current.getName());
+            txtAddress.setText(current.getAddress());
+            btnDelete.setDisable(false);
+        } );
     }
 
     private void loadStudents() {
@@ -61,7 +68,7 @@ public class StudentManageViewController {
         try {
             Statement stm = connection.createStatement();
             ResultSet rst = stm.executeQuery("SELECT *FROM Student");
-            if (rst.next()) {
+            while (rst.next()) {
                 String id = rst.getString(1);
                 String name = rst.getString(2);
                 String address = rst.getString(3);
@@ -121,19 +128,20 @@ public class StudentManageViewController {
     }
 
     private boolean isDataValid(String name,String address) {
+        boolean dataValid=true;
         if (address.isEmpty() || txtAddress.getStyleClass().contains("invalid")) {
             txtAddress.selectAll();
             txtAddress.requestFocus();
             if(!txtAddress.getStyleClass().contains("invalid")) txtAddress.getStyleClass().add("invalid");
-            return false;
+            dataValid=false;
         }
         if (name.isEmpty() || txtName.getStyleClass().contains("invalid")) {
             txtName.selectAll();
             txtName.requestFocus();
             if(!txtName.getStyleClass().contains("invalid")) txtName.getStyleClass().add("invalid");
-            return false;
+            dataValid=false;
         }
-        return true;
+        return dataValid;
     }
 
     @FXML
