@@ -7,6 +7,7 @@
     <groupId>lk.ijse.dep10</groupId>
     <artifactId>teamproject-2</artifactId>
     <version>0.2.0</version>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
