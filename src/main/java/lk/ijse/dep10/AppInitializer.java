@@ -44,7 +44,7 @@ public class AppInitializer extends Application {
 
             }
             br.close();
-            System.out.println(sb.toString());
+//            System.out.println(sb.toString());
             Statement statement =connection.createStatement();
             statement.execute(sb.toString());
         } catch (IOException e) {

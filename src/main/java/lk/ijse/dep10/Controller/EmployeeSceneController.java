@@ -64,18 +64,37 @@ public class EmployeeSceneController {
 
             Connection connection = DBConnector.getInstance().getConnection();
             connection.setAutoCommit(false);
-            PreparedStatement preStm = connection.prepareStatement("Insert into Employee value (?,?,?)");
+            if(tblEmployee.getSelectionModel().getSelectedItem()==null) {
+                PreparedStatement preStm = connection.prepareStatement("Insert into Employee value (?,?,?)");
 
-            preStm.setString(1,id);
-            preStm.setString(2,name);
-            preStm.setString(3,address);
-            preStm.execute();
+                preStm.setString(1, id);
+                preStm.setString(2, name);
+                preStm.setString(3, address);
+                preStm.execute();
 
-            Employee employee = new Employee(id, name, address);
-            tblEmployee.getItems().add(employee);
+                Employee employee = new Employee(id, name, address);
+                tblEmployee.getItems().add(employee);
+
+            }else if(tblEmployee.getSelectionModel().getSelectedItem()!=null) {
+
+                Employee emp = tblEmployee.getSelectionModel().getSelectedItem();
+                PreparedStatement preStm2 = connection.prepareStatement("update  Employee set name =?,address=? where id =?");
+                preStm2.setString(1,txtName.getText());
+                preStm2.setString(2,txtAddress.getText());
+                preStm2.setString(3,emp.getId());
+                preStm2.execute();
+
+                Employee empNew = new Employee(txtID.getText(),txtName.getText(),txtAddress.getText());
+              tblEmployee.getItems().clear();
+              updateTable();
+
+
+
+            }
+            connection.commit();
             btnNew.fire();
 
-            connection.commit();
+
         } catch (Throwable e) {
             e.printStackTrace();
             try {
@@ -90,6 +109,7 @@ public class EmployeeSceneController {
     }
     public void initialize(){
         btnDelete.setDisable(true);
+        txtID.setDisable(true);
         updateTable();
         generateId();
 
