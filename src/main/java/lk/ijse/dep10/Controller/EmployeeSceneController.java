@@ -174,5 +174,6 @@ public class EmployeeSceneController {
         txtName.clear();
         txtAddress.clear();
         generateId();
+        tblEmployee.getSelectionModel().clearSelection();
     }
 }
