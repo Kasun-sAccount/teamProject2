@@ -19,7 +19,7 @@
                <children>
                   <HBox>
                      <children>
-                        <Button mnemonicParsing="false" text="New Emplooyee+" />
+                        <Button fx:id="btnNew" mnemonicParsing="false" onAction="#btnNewOnAction" text="New Emplooyee+" />
                         <Label prefHeight="16.0" prefWidth="157.0" />
                         <Label layoutX="144.0" layoutY="10.0" prefHeight="16.0" prefWidth="247.0" text="EMPLOYEE MANAGEMENT">
                            <font>
