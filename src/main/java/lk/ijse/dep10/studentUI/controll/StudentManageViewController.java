@@ -8,6 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import lk.ijse.dep10.studentUI.db.DBConnection;
 import lk.ijse.dep10.studentUI.model.Student;
@@ -102,7 +103,19 @@ public class StudentManageViewController {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
-
+        String id = tblStudents.getSelectionModel().getSelectedItem().getId();
+        try {
+            Statement stm = DBConnection.getInstance().getConnection().createStatement();
+            String sql = "DELETE FROM Student WHERE id='%s'";
+            sql= String.format(sql, id);
+            System.out.println(sql);
+            stm.executeUpdate(sql);
+            tblStudents.getItems().remove(tblStudents.getSelectionModel().getSelectedItem());
+        } catch (SQLException e) {
+            e.printStackTrace();
+            new Alert(Alert.AlertType.ERROR,"Fail to delete the Student please try again").showAndWait();
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
@@ -145,8 +158,8 @@ public class StudentManageViewController {
     }
 
     @FXML
-    void tblStudentsOnKeyReleased(KeyEvent event) {
-
+    private void tblStudentsOnKeyReleased(KeyEvent event) {
+        if(event.getCode()== KeyCode.DELETE)btnDelete.fire();
     }
 
 }
