@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane prefHeight="481.0" prefWidth="455.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.studentUI.controll.StudentManageViewController">
+<AnchorPane prefHeight="481.0" prefWidth="455.0" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.studentUI.controll.StudentManageViewController">
    <children>
       <Button fx:id="btnAddNewStudent" layoutX="25.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnAddNewStudentOnAction" style="-fx-background-color: green;" text="+NEW STUDENT" textFill="WHITE" />
       <VBox layoutX="10.0" layoutY="73.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
@@ -24,7 +24,7 @@
             <HBox spacing="10.0">
                <children>
                   <Label alignment="CENTER_RIGHT" prefWidth="80.0" text="Name:" textAlignment="RIGHT" HBox.hgrow="ALWAYS" />
-                  <TextField fx:id="txtName" disable="true" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="194.0" promptText="Kasun Lakmal" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtName" disable="true" maxWidth="1.7976931348623157E308" prefHeight="24.0" prefWidth="194.0" promptText="Kasun Lakmal" stylesheets="@styles/style.css" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
             <HBox spacing="10.0">
@@ -37,7 +37,7 @@
       </VBox>
       <HBox alignment="CENTER" layoutX="102.0" layoutY="200.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
          <children>
-            <Button fx:id="brnSave" disable="true" mnemonicParsing="false" onAction="#btnSaveOnAction" prefWidth="70.0" style="-fx-background-color: blue;" text="SAVE" textFill="WHITE" />
+            <Button fx:id="btnSave" disable="true" mnemonicParsing="false" onAction="#btnSaveOnAction" prefWidth="70.0" style="-fx-background-color: blue;" text="SAVE" textFill="WHITE" />
             <Button fx:id="btnDelete" disable="true" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefWidth="70.0" style="-fx-background-color: red;" text="DELETE" textFill="WHITE" />
          </children>
       </HBox>

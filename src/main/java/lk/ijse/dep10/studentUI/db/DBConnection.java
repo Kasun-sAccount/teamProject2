@@ -46,4 +46,8 @@ public class DBConnection {
     public static DBConnection getInstance() {
         return dbConnection == null ? dbConnection = new DBConnection() : dbConnection;
     }
+
+    public Connection getConnection() {
+        return connection;
+    }
 }

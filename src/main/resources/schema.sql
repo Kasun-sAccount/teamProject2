@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS Student(
     id VARCHAR(100) PRIMARY KEY ,
     name VARCHAR(200) NOT NULL ,
-    address VARCHAR(150)
+    address VARCHAR(150) NOT NULL
 );
