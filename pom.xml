@@ -5,8 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>lk.ijse.dep10</groupId>
-    <artifactId>teamproject-2</artifactId>
-    <version>0.2.0</version>
+    <artifactId>jdbc-assignment-2</artifactId>
+    <version>1.0.0</version>
+
     <packaging>jar</packaging>
 
     <properties>
@@ -15,19 +16,26 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies><!-- https://mvnrepository.com/artifact/org.openjfx/javafx-fxml -->
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-fxml -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>19.0.2.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+
+
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <version>8.0.32</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>19.0.2.1</version>
+        </dependency>
     </dependencies>
 
 </project>
