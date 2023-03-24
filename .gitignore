@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 .idea/
 target/
 out/
 *.iml
 application.properties
+=======
+application.properties
+.idea/
+target/
+out/
+*.iml
+>>>>>>> origin/main
