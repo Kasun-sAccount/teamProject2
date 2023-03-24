@@ -3,6 +3,7 @@ package lk.ijse.dep10;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+<<<<<<< HEAD
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import lk.ijse.dep10.db.DBConnector;
@@ -12,6 +13,11 @@ import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+=======
+import javafx.stage.Stage;
+
+import java.io.IOException;
+>>>>>>> refs/remotes/origin/main
 
 public class AppInitializer extends Application {
 
@@ -20,6 +26,7 @@ public class AppInitializer extends Application {
     }
 
     @Override
+<<<<<<< HEAD
     public void start(Stage primaryStage) {
         checkTable();
         try {
@@ -56,5 +63,11 @@ public class AppInitializer extends Application {
             new Alert(Alert.AlertType.ERROR,"Fail to connect with database server").showAndWait();
             throw new RuntimeException(e);
       }
+=======
+    public void start(Stage primaryStage) throws IOException {
+        primaryStage.setScene(new Scene(new FXMLLoader(getClass().getResource("/View/MainScene.fxml")).load()));
+        primaryStage.show();
+        primaryStage.centerOnScreen();
+>>>>>>> refs/remotes/origin/main
     }
 }
