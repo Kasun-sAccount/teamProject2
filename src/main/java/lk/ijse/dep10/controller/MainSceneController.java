@@ -1,4 +1,4 @@
-package lk.ijse.dep10.Controller;
+package lk.ijse.dep10.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

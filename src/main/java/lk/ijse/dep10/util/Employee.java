@@ -1,4 +1,4 @@
-package lk.ijse.dep10.Util;
+package lk.ijse.dep10.util;
 
 import java.io.Serializable;
 

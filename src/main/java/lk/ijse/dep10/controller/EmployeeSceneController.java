@@ -1,4 +1,4 @@
-package lk.ijse.dep10.Controller;
+package lk.ijse.dep10.controller;
 
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -8,7 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import lk.ijse.dep10.Util.Employee;
+import lk.ijse.dep10.util.Employee;
 import lk.ijse.dep10.db.DBConnector;
 
 import java.sql.*;
